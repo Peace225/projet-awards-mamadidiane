@@ -51,18 +51,24 @@ export default function Hero() {
   return (
     <section className="relative h-[80vh] md:h-[85vh] w-full overflow-hidden bg-black flex items-center">
       
-      {/* 1. IMAGE DE FOND (Calée en haut pour le visage) */}
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={current}
-          src={slide.image}
-          alt={slide.h1}
-          className="absolute inset-0 w-full h-full object-cover object-top brightness-[0.4]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}
-        />
-      </AnimatePresence>
+     {/* 1. IMAGE DE FOND (Optimisée Mobile & Desktop) */}
+<AnimatePresence mode="wait">
+  <motion.img
+    key={current}
+    src={slide.image}
+    alt={slide.h1}
+    /* Explications des classes :
+       - object-cover : remplit toute la zone
+       - object-center : centre l'image sur mobile (évite de couper les côtés)
+       - md:object-top : sur tablette/PC, on cale en haut pour ne pas couper la tête
+       - brightness-[0.5] : légèrement plus clair sur mobile pour une meilleure visibilité
+    */
+    className="absolute inset-0 w-full h-full object-cover object-center md:object-top brightness-[0.5] md:brightness-[0.4] z-0"
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1.5 }}
+  />
+</AnimatePresence>
 
       {/* 2. CALQUE ÉTOILÉ SCINTILLANT (Nouveau) */}
       <div className="absolute inset-0 pointer-events-none z-0">
