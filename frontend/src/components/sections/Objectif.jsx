@@ -67,7 +67,7 @@ export default function Objectifs() {
             Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Objectifs</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
-            Les Awards Mamadi Diané visent à célébrer l’excellence, encourager l’innovation et créer un impact positif durable à travers 4 piliers fondamentaux.
+            Les AWARDS MAMADI DIANE visent à célébrer l’excellence, encourager l’innovation et créer un impact positif durable à travers 4 piliers fondamentaux.
           </p>
         </motion.div>
 
