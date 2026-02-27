@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from "react"; // IMPORT CORRIGÉ ICI
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import Logo from "../assets/logo.jpeg";
+import Logo from "../assets/logo.png";
 import Dropdown from "../Dropdown";
 
 export default function Navbar() {
@@ -69,7 +69,7 @@ export default function Navbar() {
         
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={Logo} alt="Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain rounded-full border border-yellow-500/50 group-hover:scale-105 transition-transform" />
+          <img src={Logo} alt="Logo" className="w-15 h-15 md:w-12 md:h-12 object-contain rounded-full border border-yellow-500/50 group-hover:scale-105 transition-transform" />
           <h1 className="font-black text-yellow-400 text-sm md:text-lg tracking-tighter uppercase">Awards Mamadi Diane</h1>
         </Link>
 

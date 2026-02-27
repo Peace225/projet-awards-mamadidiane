@@ -79,7 +79,7 @@ export default function Evenement() {
             className="bg-zinc-950 border border-yellow-500/30 rounded-[2rem] p-6 lg:p-8 shadow-2xl"
           >
             <h3 className="text-lg font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-widest">
-              <FileText size={20} /> Documents
+              <FileText size={20} /> PIECES JOINTES
             </h3>
             <div className="space-y-3">
               {documents.map((doc, index) => (
@@ -99,14 +99,9 @@ export default function Evenement() {
           {/* Titre et Citation */}
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center lg:text-left">
             <div className="h-1 w-16 bg-yellow-500 mb-6 mx-auto lg:mx-0 rounded-full" />
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-black text-gray-900 uppercase leading-tight">
-              Cérémonie Officielle <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-400">
-                16 Mai 2027
-              </span>
-            </h2>
+            {/*  */}
             <p className="mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 font-medium italic">
-              "Les Awards Mamadi Diane célèbrent des parcours à fort impact et consacrent des contributions durables."
+              "Les AWARDS MAMADI DIANE célèbrent des parcours à fort impact et consacrent des contributions durables."
             </p>
           </motion.div>
 
@@ -140,7 +135,7 @@ export default function Evenement() {
           </motion.div>
 
           {/* CARTES INFO (Hauteur égale grâce à grid-cols-1 md:grid-cols-3) */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {infoCards.map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -157,7 +152,7 @@ export default function Evenement() {
                 <p className="text-gray-500 text-sm leading-relaxed flex-1">{item.desc}</p>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

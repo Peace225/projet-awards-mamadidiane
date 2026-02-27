@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ShieldCheck, Users, Radio, Globe, ArrowRight, Sparkles } from "lucide-react";
-import PartenaireImage from "../components/assets/partenaire.jpg"; // Garde bien ton import
+import PartenaireImage from "../components/assets/logo.png"; // Garde bien ton import
 
 export default function DevenirPartenaire() {
   
@@ -114,7 +114,7 @@ export default function DevenirPartenaire() {
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-600 to-yellow-400 text-black px-10 py-4 rounded-2xl font-black uppercase tracking-widest text-sm hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-300 group"
               >
                 <Sparkles size={18} />
-                <span>Demander le Dossier</span>
+                <span>DOSSIER DE PARTENARIAT</span>
                 <ArrowRight size={18} className="transform group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </motion.div>

@@ -37,7 +37,7 @@ export default function Footer() {
           
           {/* LOGO placé en bas de la description */}
           <img 
-            src="/images/logo.jpeg" 
+            src="/images/logo.png" 
             alt="Logo Awards" 
             className="w-16 h-16 object-contain rounded-full border border-yellow-700/50 shadow-lg bg-black transition-transform hover:scale-110 duration-300"
           />
