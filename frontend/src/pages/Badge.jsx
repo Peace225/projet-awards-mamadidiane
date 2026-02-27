@@ -41,7 +41,7 @@ export default function Badge() {
             Réservation de <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Badge</span>
           </h1>
           <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-400 leading-relaxed font-light">
-            Réservez votre place pour assister à la prestigieuse cérémonie officielle des Awards Mamadi Diané. Une soirée d'excellence et de célébration.
+            Inscrivez-vous dès à présent afin de prendre  part à la cérémonie officielle des Awards MAMADI DIANE, une soirée d’exception placée sous le signe de l’excellence, du leadership et de la célébration des parcours remarquables.
           </p>
         </motion.div>
       </section>

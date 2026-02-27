@@ -7,17 +7,17 @@ export default function ValeursSection() {
   const valeurs = [
     { 
       title: "Excellence", 
-      desc: "Nous exigeons la qualité, l'exemplarité et le dépassement de soi dans tout ce que nous entreprenons pour hisser le continent au plus haut niveau.",
+      desc: "L’excellence constitue le fondement des Awards Mamadi Diane.Elle se traduit par la reconnaissance de parcours d’exception, d’engagements remarquables et d’actions à fort impact. Nous valorisons la rigueur, la performance durable et la capacité à inspirer au plus haut niveau.",
       icon: Award
     },
     { 
       title: "Innovation", 
-      desc: "Nous célébrons la créativité, les idées visionnaires et les solutions de rupture qui transforment positivement et durablement notre société.",
+      desc: "L’innovation incarne la vision d’avenir que nous défendons.Nous célébrons les initiatives audacieuses, les idées transformatrices et les solutions créatives qui participent activement au développement institutionnel, économique et social du continent.",
       icon: Lightbulb
     },
     { 
       title: "Intégrité", 
-      desc: "Nous faisons de la transparence, de la rigueur et de l’éthique absolue les piliers inébranlables de toutes nos actions et sélections.",
+      desc:"L’intégrité guide chacune de nos actions.Transparence, éthique, loyauté institutionnelle et respect des valeurs républicaines constituent les piliers de notre démarche. Nous croyons qu’un leadership durable repose avant tout sur la probité et le sens de la responsabilité.",
       icon: ShieldCheck
     },
   ];

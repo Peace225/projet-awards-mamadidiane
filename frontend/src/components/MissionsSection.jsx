@@ -58,7 +58,7 @@ export default function MissionsSection() {
             Notre <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Mission</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
-            Notre ambition va au-delà d'une simple cérémonie. Nous construisons un écosystème pérenne basé sur trois piliers fondamentaux.
+           Notre mission consiste à distinguer les parcours d’exception, à mettre en lumière les initiatives à fort impact et à promouvoir un leadership responsable, porteur de transformation durable.
           </p>
         </motion.div>
 
