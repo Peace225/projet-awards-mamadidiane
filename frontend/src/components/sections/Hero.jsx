@@ -11,7 +11,7 @@ export default function Hero() {
     {
       image: "/images/baniere/bar.jpg", // Assurez-vous que le chemin est correct
       h1: "Bienvenue sur la page officielle des Awards Mamadi Diane",
-      subH1: "L'Excellence en Héritage",
+      subH1: "LEGACY-EXCELLENCE-IMPACT",
       p: "Une distinction d’excellence dédiée à la reconnaissance des leaders et des institutions stratégiques.",
       categories: [
         { title: "Candidater", icon: <FaTrophy />, color: "text-yellow-400", border: "border-yellow-500", path: "/candidater" },

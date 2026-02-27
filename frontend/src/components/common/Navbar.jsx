@@ -15,7 +15,8 @@ export default function Navbar() {
   const aproposItems = [
     { label: "Qui sommes nous", link: "#qui-sommes-nous" },
     { label: "Nos valeurs", link: "#nos-valeurs" },
-    { label: "Nos missions", link: "#nos-missions" },
+    { label: "Notre mission", link: "#nos-missions" },
+    { label: "MAMADI DIANE – Parcours & engagement", link: "#parcours-engagement" },
   ];
 
   const partenairesItems = [

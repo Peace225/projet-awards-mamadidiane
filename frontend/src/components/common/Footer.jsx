@@ -32,7 +32,7 @@ export default function Footer() {
         >
           <h4 className="font-black mb-3 uppercase tracking-widest text-[10px]">À PROPOS</h4>
           <p className="text-gray-900 text-[11px] leading-relaxed text-center md:text-left font-medium mb-5">
-            Les Awards Mamadi Diane valorisent le leadership, l'impact social et l'excellence entrepreneuriale à travers le continent.
+            Les Awards Mamadi Diane sont une distinction institutionnelle célébrant le leadership, l’impact social et l’excellence entrepreneuriale à l’échelle du continent africain.
           </p>
           
           {/* LOGO placé en bas de la description */}
@@ -53,7 +53,7 @@ export default function Footer() {
           <ul className="space-y-1.5 text-[11px] font-semibold">
             <li><a href="/apropos" className="hover:text-white transition-colors">Qui sommes-nous</a></li>
             <li><a href="/candidater" className="hover:text-white transition-colors">Candidater</a></li>
-            <li><a href="/programme" className="hover:text-white transition-colors">Programme</a></li>
+            <li><a href="/programme" className="hover:text-white transition-colors">Agenda des awards</a></li>
             <li><a href="/contact" className="hover:text-white transition-colors">Contact</a></li>
           </ul>
         </motion.div>

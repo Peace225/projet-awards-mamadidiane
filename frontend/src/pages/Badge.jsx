@@ -91,11 +91,11 @@ export default function Badge() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className={labelStyle}>Nom *</label>
-                  <input type="text" placeholder="Votre nom" className={inputStyle} required />
+                  <input type="text" placeholder="Nom de famille" className={inputStyle} required />
                 </div>
                 <div>
                   <label className={labelStyle}>Prénoms *</label>
-                  <input type="text" placeholder="Vos prénoms" className={inputStyle} required />
+                  <input type="text" placeholder="Prénom(s)" className={inputStyle} required />
                 </div>
                 <div>
                   <label className={labelStyle}>Email Officiel *</label>
@@ -133,11 +133,11 @@ export default function Badge() {
                 </div>
                 <div>
                   <label className={labelStyle}>Organisation / Société</label>
-                  <input type="text" placeholder="Nom de votre structure" className={inputStyle} />
+                  <input type="text" placeholder="Raison sociale" className={inputStyle} />
                 </div>
                 <div>
                   <label className={labelStyle}>Fonction / Titre</label>
-                  <input type="text" placeholder="Votre poste" className={inputStyle} />
+                  <input type="text" placeholder="Intitulé du poste" className={inputStyle} />
                 </div>
               </div>
             </div>
@@ -151,7 +151,7 @@ export default function Badge() {
               <div>
                 <label className={labelStyle}>Remarques ou restrictions (Optionnel)</label>
                 <textarea
-                  placeholder="Indiquez ici vos besoins logistiques, allergies alimentaires ou toute autre demande..."
+                  placeholder="Nous vous prions de préciser vos besoins logistiques, éventuelles allergies alimentaires ou toute demande spécifique...."
                   className={`${inputStyle} h-32 resize-none`}
                 />
               </div>

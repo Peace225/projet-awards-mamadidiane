@@ -64,7 +64,7 @@ export default function Objectifs() {
             <div className="h-1 w-16 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full" />
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
-            Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Objectifs</span>
+            UNE AMBITION <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300"> D’EXCELLENCE</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
             Les AWARDS MAMADI DIANE visent à célébrer l’excellence, encourager l’innovation et créer un impact positif durable à travers 4 piliers fondamentaux.

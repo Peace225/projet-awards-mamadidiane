@@ -40,8 +40,9 @@ export default function PartenairesCarousel() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
             Nos <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Partenaires</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
-            Merci aux institutions et entreprises d'exception qui accompagnent notre vision et rendent cette célébration de l'excellence possible.
+          <p className="text-gray-400 max-w-6xl mx-auto text-base md:text-lg leading-relaxed font-light">
+           Nous adressons nos remerciements distingués aux institutions et aux entreprises de référence qui, par leur engagement et leur confiance, accompagnent cette initiative et contribuent à l’élévation de cette célébration de l’excellence.
+          Leur soutien stratégique et leur implication témoignent d’une volonté commune de promouvoir les valeurs d’exemplarité, de leadership et de responsabilité institutionnelle.
           </p>
         </motion.div>
       </div>

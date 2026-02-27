@@ -26,16 +26,14 @@ export default function Accreditation() {
         {/* Infos importantes */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg space-y-3 sm:space-y-4">
           <p className="text-sm sm:text-base">
-            Les personnes ayant dûment complété le formulaire seront informées
-            par email de leur accréditation.
+            Les personnes ayant complété le formulaire d’accréditation seront informées par e-mail de la validation de leur demande.
           </p>
           <p className="text-sm sm:text-base">
-            Les badges pourront être retirés sur le lieu des accréditations presse
-            sur présentation d’une pièce d’identité.
+            Les badges presse pourront être retirés sur le site dédié aux accréditations, sur présentation d’une pièce d’identité en cours de validité.
           </p>
         </div>
 
-        <h2 className="text-2xl sm:text-3xl font-bold text-center">
+        <h2 className="text-2xl sm:text-3xl uppercase font-bold text-center">
           Formulaire d’Accréditation
         </h2>
 
@@ -66,8 +64,8 @@ export default function Accreditation() {
             </h3>
 
             <div className="space-y-3 sm:space-y-4">
-              <input type="text" placeholder="Nom du média" className="input w-full" required />
-              <input type="text" placeholder="Siège du média" className="input w-full" required />
+              <input type="text" placeholder="Nom de l’organe de presse" className="input w-full" required />
+              <input type="text" placeholder=" Siège social du média" className="input w-full" required />
               <input type="text" placeholder="Adresse" className="input w-full" required />
               <input type="email" placeholder="Email" className="input w-full" required />
               <input type="tel" placeholder="Téléphone" className="input w-full" required />

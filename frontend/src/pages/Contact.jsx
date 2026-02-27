@@ -72,8 +72,8 @@ export default function ContactSection() {
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-yellow-500/10 blur-[50px] rounded-full pointer-events-none" />
 
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-8">
-                Comité d'Organisation
+              <h3 className="text-xl font-black text-white uppercase tracking-wider mb-8">
+               Haute Commission des Awards
               </h3>
 
               <div className="space-y-8">
@@ -118,7 +118,7 @@ export default function ContactSection() {
               className="bg-zinc-900/80 backdrop-blur-xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden h-full"
             >
               <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">
-                Envoyer un message
+               Soumettre votre demande
               </h3>
               <p className="text-gray-400 text-sm mb-10">Nous vous répondrons dans les plus brefs délais.</p>
 
@@ -161,7 +161,7 @@ export default function ContactSection() {
                   type="submit"
                   className="w-full flex items-center justify-center gap-3 bg-gradient-to-r from-yellow-600 to-yellow-400 text-black py-4 rounded-xl font-black uppercase tracking-widest text-sm hover:shadow-[0_0_30px_rgba(234,179,8,0.4)] transition-all duration-300 group mt-4"
                 >
-                  <span>Envoyer le message</span>
+                  <span>Soumettre</span>
                   <Send size={18} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </motion.button>
               </form>

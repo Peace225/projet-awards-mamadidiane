@@ -37,7 +37,7 @@ export default function Newsletter() {
                   Abonnez-vous à la newsletter
                 </h4>
                 <p className="text-gray-500 text-sm mb-6 font-medium">
-                  Recevez les exclusivités sur les nominés et l'ouverture de la billetterie.
+                  Recevez en avant-première les exclusivités, les annonces officielles et les actualités des nominés.
                 </p>
 
                 <form onSubmit={handleSubmit} className="flex flex-col gap-3">
