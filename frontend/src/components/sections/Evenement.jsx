@@ -33,7 +33,6 @@ export default function Evenement() {
   })), []);
 
   const documents = [
-    { name: "Programme officiel", link: "/documents/programme.pdf" },
     { name: "Dossier de présentation", link: "/documents/presentation.pdf" },
     { name: "Dossier de candidature", link: "/documents/candidature.pdf" },
     { name: "Dossier de sponsoring", link: "/documents/sponsoring.pdf" },
@@ -79,7 +78,7 @@ export default function Evenement() {
             className="bg-zinc-950 border border-yellow-500/30 rounded-[2rem] p-6 lg:p-8 shadow-2xl"
           >
             <h3 className="text-lg font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-widest">
-              <FileText size={20} /> PIECES JOINTES
+              <FileText size={20} /> DOCUMENTS OFFICIELS
             </h3>
             <div className="space-y-3">
               {documents.map((doc, index) => (

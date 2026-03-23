@@ -23,9 +23,6 @@ export default function Newsletter() {
             <h3 className="font-black text-2xl uppercase tracking-tighter leading-none mb-4">
               Restez <br /> Informé
             </h3>
-            <p className="text-sm font-bold opacity-80 uppercase tracking-widest">
-              Awards Mamadi Diane 2027
-            </p>
             <div className="w-12 h-1 bg-zinc-900 mt-4"></div>
           </div>
 

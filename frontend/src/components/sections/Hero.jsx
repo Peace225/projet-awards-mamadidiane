@@ -1,10 +1,9 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; // Pour le SEO
 import { FaTrophy, FaCertificate } from "react-icons/fa";
 
 export default function Hero() {
-  const navigate = useNavigate();
   const [current, setCurrent] = useState(0);
 
   const slides = [
@@ -22,18 +21,16 @@ export default function Hero() {
 
   const slide = slides[current];
 
-  // --- GÉNÉRATION DU FOND ÉTOILÉ (useMemo pour la performance) ---
+  // --- GÉNÉRATION DU FOND ÉTOILÉ ---
   const stars = useMemo(() => {
-    const starCount = 80; // Nombre d'étoiles
+    const starCount = 80;
     return Array.from({ length: starCount }, (_, i) => ({
       id: i,
-      top: Math.random() * 100, // Position verticale aléatoire (%)
-      left: Math.random() * 100, // Position horizontale aléatoire (%)
-      size: Math.random() * 2 + 0.5, // Taille aléatoire (0.5px à 2.5px)
-      // Délai et durée de scintillement aléatoires
+      top: Math.random() * 100,
+      left: Math.random() * 100,
+      size: Math.random() * 2 + 0.5,
       blinkDelay: Math.random() * 3,
       blinkDuration: Math.random() * 2 + 1,
-      // Couleur : majoritairement blanc, quelques-unes dorées
       color: Math.random() > 0.8 ? "#FFE082" : "#FFFFFF", 
     }));
   }, []);
@@ -49,29 +46,24 @@ export default function Hero() {
     })), []);
 
   return (
-    <section className="relative h-[80vh] md:h-[85vh] w-full overflow-hidden bg-black flex items-center">
+    <section aria-label="Bannière d'accueil" className="relative h-[80vh] md:h-[85vh] w-full overflow-hidden bg-black flex items-center">
       
-     {/* 1. IMAGE DE FOND (Optimisée Mobile & Desktop) */}
-<AnimatePresence mode="wait">
-  <motion.img
-    key={current}
-    src={slide.image}
-    alt={slide.h1}
-    /* Explications des classes :
-       - object-cover : remplit toute la zone
-       - object-center : centre l'image sur mobile (évite de couper les côtés)
-       - md:object-top : sur tablette/PC, on cale en haut pour ne pas couper la tête
-       - brightness-[0.5] : légèrement plus clair sur mobile pour une meilleure visibilité
-    */
-    className="absolute inset-0 w-full h-full object-cover object-center md:object-top brightness-[0.5] md:brightness-[0.4] z-0"
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ duration: 1.5 }}
-  />
-</AnimatePresence>
+      {/* 1. IMAGE DE FOND (Correction MOBILE ICI) */}
+      <AnimatePresence mode="wait">
+        {/* MODIFICATION CLÉ : Remplacement de 'object-center' par 'object-left' */}
+        <motion.img
+          key={current}
+          src={slide.image}
+          alt={`Bannière : ${slide.h1}`}
+          className="absolute inset-0 w-full h-full object-cover object-left md:object-top brightness-[0.5] md:brightness-[0.4] z-0"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        />
+      </AnimatePresence>
 
-      {/* 2. CALQUE ÉTOILÉ SCINTILLANT (Nouveau) */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      {/* 2. CALQUE ÉTOILÉ SCINTILLANT (Accessibilité ajoutée) */}
+      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true"> {/* aria-hidden car décoratif */}
         {stars.map((star) => (
           <motion.div
             key={star.id}
@@ -82,9 +74,8 @@ export default function Hero() {
               width: star.size,
               height: star.size,
               backgroundColor: star.color,
-              boxShadow: star.size > 1.5 ? `0 0 ${star.size * 2}px ${star.color}` : "none", // Effet de halo pour les plus grosses
+              boxShadow: star.size > 1.5 ? `0 0 ${star.size * 2}px ${star.color}` : "none",
             }}
-            // Animation de scintillement (blinking)
             animate={{
               opacity: [0.2, 1, 0.2],
             }}
@@ -98,8 +89,8 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* 3. EFFETS DE FÊTE & OVERLAY (Confettis) */}
-      <div className="absolute inset-0 pointer-events-none z-0">
+      {/* 3. EFFETS DE FÊTE & OVERLAY */}
+      <div className="absolute inset-0 pointer-events-none z-0" aria-hidden="true">
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/20" />
         {confettis.map((c) => (
           <motion.div
@@ -112,7 +103,7 @@ export default function Hero() {
         ))}
       </div>
 
-      {/* 4. LE CONTENU : Aligné à DROITE */}
+      {/* 4. LE CONTENU (Amélioration SEO et Alignement Mobile) */}
       <div className="relative z-10 w-full flex justify-center md:justify-end px-6 md:pr-24 lg:pr-40">
         
         <motion.div
@@ -121,25 +112,23 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="max-w-3xl text-center md:text-right flex flex-col items-center md:items-end"
         >
-          {/* SubH1 */}
-          <span className="text-yellow-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4">
+          {/* SEO : Remplacement du span par un h2 sémantique */}
+          <h2 className="text-yellow-500 font-bold tracking-[0.4em] uppercase text-[10px] md:text-xs mb-4">
             {slide.subH1}
-          </span>
+          </h2>
 
-          {/* H1 : Texte plein (non coupé) mais décalé */}
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black uppercase text-white leading-tight drop-shadow-2xl">
             {slide.h1}
           </h1>
 
-          {/* Paragraphe */}
           <p className="text-gray-200 mt-6 max-w-xl text-sm md:text-lg font-light opacity-90">
             {slide.p}
           </p>
 
-          {/* Boutons alignés */}
+          {/* Boutons remplacés par des Liens pour le SEO et l'Accessibilité */}
           <div className="flex flex-row flex-wrap justify-center md:justify-end gap-4 mt-10">
             {slide.categories.map((cat, index) => (
-              <motion.button
+              <motion.div
                 key={index}
                 whileHover={{ 
                   scale: 1.05, 
@@ -148,16 +137,21 @@ export default function Hero() {
                   boxShadow: "0 0 20px rgba(234, 179, 8, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate(cat.path)}
-                className={`flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 rounded-full border ${cat.border} bg-black/40 backdrop-blur-md transition-all group`}
+                className={`rounded-full border ${cat.border} bg-black/40 backdrop-blur-md transition-all group overflow-hidden`}
               >
-                <span className={`text-xl ${cat.color} group-hover:text-black transition-colors`}>
-                  {cat.icon}
-                </span>
-                <span className="font-bold text-[10px] md:text-xs uppercase tracking-widest text-white group-hover:text-black transition-colors">
-                  {cat.title}
-                </span>
-              </motion.button>
+                 {/* Utilisation de <Link> au lieu de <button> */}
+                <Link
+                  to={cat.path}
+                  className="flex items-center gap-3 px-6 py-3 md:px-8 md:py-4 w-full h-full"
+                >
+                  <span className={`text-xl ${cat.color} group-hover:text-black transition-colors`} aria-hidden="true">
+                    {cat.icon}
+                  </span>
+                  <span className="font-bold text-[10px] md:text-xs uppercase tracking-widest text-white group-hover:text-black transition-colors">
+                    {cat.title}
+                  </span>
+                </Link>
+              </motion.div>
             ))}
           </div>
         </motion.div>
