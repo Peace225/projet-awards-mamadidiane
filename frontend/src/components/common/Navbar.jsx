@@ -27,8 +27,8 @@ export default function Navbar() {
   const mediasItems = [
     { label: "Galerie photos", link: "/photos" },
     { label: "Vidéos", link: "/videos" },
-    { label: "Presse", link: "/videos" },
-    { label: "Interviews", link: "/videos" },
+    { label: "Presse", link: "/presse" }, // Corrigé le lien
+    { label: "Interviews", link: "/interviews" }, // Corrigé le lien
   ];
 
   const navStructure = [
@@ -41,11 +41,11 @@ export default function Navbar() {
     { type: "link", title: "CONTACT", link: "/contact" },
   ];
 
+  // Fermer le menu si on clique en dehors
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (navbarRef.current && !navbarRef.current.contains(e.target)) {
         setOpenMenu(null);
-        setIsMobileMenuOpen(false);
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
@@ -58,6 +58,7 @@ export default function Navbar() {
     } else {
       navigate(link);
     }
+    // Fermeture de tous les menus après clic
     setOpenMenu(null);
     setIsMobileMenuOpen(false);
     setMobileDropdownOpen(null);
@@ -69,9 +70,8 @@ export default function Navbar() {
       className="bg-black text-white px-4 md:px-6 py-3 sticky top-0 z-50 shadow-2xl border-b border-yellow-500/20 backdrop-blur-md bg-opacity-90"
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link to="/" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 group">
           <img
             src={Logo}
             alt="Logo"
@@ -82,7 +82,7 @@ export default function Navbar() {
           </h1>
         </Link>
 
-        {/* Burger */}
+        {/* Burger Button */}
         <button
           className="lg:hidden text-yellow-400 p-2"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -94,16 +94,20 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center space-x-4 xl:space-x-7">
           {navStructure.map((item, idx) =>
             item.type === "dropdown" ? (
-              <Dropdown
+              <div
                 key={item.key}
-                title={item.title}
-                items={item.items}
-                isOpen={openMenu === item.key}
-                onToggle={() =>
-                  setOpenMenu(openMenu === item.key ? null : item.key)
-                }
-                onItemClick={handleItemClick}
-              />
+                className="relative"
+                onMouseEnter={() => setOpenMenu(item.key)}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <Dropdown
+                  title={item.title}
+                  items={item.items}
+                  isOpen={openMenu === item.key}
+                  onToggle={() => setOpenMenu(openMenu === item.key ? null : item.key)}
+                  onItemClick={handleItemClick}
+                />
+              </div>
             ) : (
               <Link
                 key={idx}
@@ -126,10 +130,8 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute top-full left-0 w-full bg-zinc-950 transition-all duration-300 ease-in-out origin-top ${
-          isMobileMenuOpen
-            ? "scale-y-100 opacity-100 visible"
-            : "scale-y-0 opacity-0 invisible"
+        className={`lg:hidden absolute top-full left-0 w-full bg-zinc-950 transition-all duration-300 ease-in-out origin-top border-b border-yellow-500/20 ${
+          isMobileMenuOpen ? "scale-y-100 opacity-100 visible" : "scale-y-0 opacity-0 invisible"
         }`}
       >
         <div className="p-6 flex flex-col space-y-4 max-h-[80vh] overflow-y-auto">
@@ -139,16 +141,14 @@ export default function Navbar() {
                 <>
                   <button
                     onClick={() =>
-                      setMobileDropdownOpen(
-                        mobileDropdownOpen === item.key ? null : item.key
-                      )
+                      setMobileDropdownOpen(mobileDropdownOpen === item.key ? null : item.key)
                     }
                     className="flex justify-between items-center w-full text-yellow-500 font-black text-xs tracking-widest uppercase py-2"
                   >
                     {item.title}
                     <ChevronDown
                       size={16}
-                      className={`transition-transform ${
+                      className={`transition-transform duration-300 ${
                         mobileDropdownOpen === item.key ? "rotate-180" : ""
                       }`}
                     />
@@ -156,16 +156,14 @@ export default function Navbar() {
 
                   <div
                     className={`pl-4 flex flex-col space-y-3 overflow-hidden transition-all duration-300 ${
-                      mobileDropdownOpen === item.key
-                        ? "max-h-40 mt-2 pb-2"
-                        : "max-h-0"
+                      mobileDropdownOpen === item.key ? "max-h-60 mt-2 pb-4" : "max-h-0"
                     }`}
                   >
                     {item.items.map((sub, sIdx) => (
                       <button
                         key={sIdx}
                         onClick={() => handleItemClick(sub.link)}
-                        className="text-left text-sm font-medium text-gray-300 hover:text-yellow-400"
+                        className="text-left text-sm font-medium text-gray-400 hover:text-yellow-400 transition-colors"
                       >
                         {sub.label}
                       </button>
@@ -176,7 +174,7 @@ export default function Navbar() {
                 <Link
                   to={item.link}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block font-black text-sm tracking-widest uppercase py-2 hover:text-yellow-400"
+                  className="block font-black text-sm tracking-widest uppercase py-2 hover:text-yellow-400 transition-colors"
                 >
                   {item.title}
                 </Link>
@@ -187,7 +185,7 @@ export default function Navbar() {
           <Link
             to="/badge"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-yellow-400 text-black text-center py-4 rounded-xl font-black uppercase tracking-widest"
+            className="bg-yellow-400 text-black text-center py-4 rounded-xl font-black uppercase tracking-widest active:scale-95 transition-transform"
           >
             Réserver mon Badge
           </Link>

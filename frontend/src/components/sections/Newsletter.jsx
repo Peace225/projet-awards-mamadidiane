@@ -21,7 +21,7 @@ export default function Newsletter() {
           {/* Côté Gauche : Design & Texte */}
           <div className="bg-yellow-500 p-10 md:w-2/5 flex flex-col justify-center text-zinc-900">
             <h3 className="font-black text-2xl uppercase tracking-tighter leading-none mb-4">
-              Restez <br /> Informé
+              Restez <br /> Informés
             </h3>
             <div className="w-12 h-1 bg-zinc-900 mt-4"></div>
           </div>

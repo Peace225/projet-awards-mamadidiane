@@ -70,27 +70,35 @@ export default function Evenement() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-10 lg:gap-16 items-start relative z-10">
         
         {/* SIDEBAR DOCUMENTS (Mobile: En bas / Desktop: Collante à gauche) */}
-        <aside className="w-full lg:w-80 lg:sticky lg:top-28 order-last lg:order-first">
-          <motion.div 
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="bg-zinc-950 border border-yellow-500/30 rounded-[2rem] p-6 lg:p-8 shadow-2xl"
-          >
-            <h3 className="text-lg font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-widest">
-              <FileText size={20} /> RESSOURCES OFFICIELLES
-            </h3>
-            <div className="space-y-3">
-              {documents.map((doc, index) => (
-                <a key={index} href={doc.link} target="_blank" rel="noopener noreferrer"
-                  className="group flex justify-between items-center bg-white/5 p-4 rounded-xl hover:bg-yellow-500/10 transition-all border border-transparent hover:border-yellow-500/30">
-                  <span className="text-gray-300 group-hover:text-yellow-400 text-xs font-medium">{doc.name}</span>
-                  <Download size={14} className="text-yellow-500 group-hover:scale-125 transition-transform" />
-                </a>
-              ))}
-            </div>
-          </motion.div>
-        </aside>
+<aside className="w-full lg:w-80 lg:sticky lg:top-28 order-last lg:order-first">
+  <motion.div 
+    initial={{ opacity: 0, x: -20 }}
+    whileInView={{ opacity: 1, x: 0 }}
+    viewport={{ once: true }}
+    className="bg-zinc-950 border border-yellow-500/30 rounded-[2rem] p-6 lg:p-8 shadow-2xl"
+  >
+    {/* Titre augmenté à text-xl */}
+    <h3 className="text-xl font-black text-yellow-500 mb-8 flex items-center gap-3 uppercase tracking-widest">
+      <FileText size={24} /> RESSOURCES
+    </h3>
+    
+    <div className="space-y-4">
+      {documents.map((doc, index) => (
+        <a key={index} href={doc.link} target="_blank" rel="noopener noreferrer"
+          className="group flex justify-between items-center bg-white/5 p-5 rounded-xl hover:bg-yellow-500/10 transition-all border border-transparent hover:border-yellow-500/30"
+        >
+          {/* Nom du document augmenté à text-base (16px) et font-bold pour plus d'impact */}
+          <span className="text-gray-200 group-hover:text-yellow-400 text-base font-bold tracking-tight">
+            {doc.name}
+          </span>
+          
+          {/* Icône légèrement agrandie */}
+          <Download size={18} className="text-yellow-500 group-hover:scale-125 transition-transform shrink-0 ml-2" />
+        </a>
+      ))}
+    </div>
+  </motion.div>
+</aside>
 
         {/* CONTENU PRINCIPAL */}
         <div className="flex-1 space-y-12 lg:space-y-20 w-full">
