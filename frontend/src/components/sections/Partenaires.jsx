@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PartenairesCarousel() {
   const partners = [
-    { name: "Orange Côte d'Ivoire", logo: "/images/partenaires/logo1.jpg" },
+    // { name: "Orange Côte d'Ivoire", logo: "/images/partenaires/logo1.jpg" },
   ];
 
   return (
