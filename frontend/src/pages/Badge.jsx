@@ -41,7 +41,8 @@ export default function Badge() {
             Réservation de <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Badge</span>
           </h1>
           <p className="max-w-2xl mx-auto text-base md:text-lg text-gray-400 leading-relaxed font-light">
-            Inscrivez-vous dès à présent afin de prendre  part à la cérémonie officielle des Awards MAMADI DIANE, une soirée d’exception placée sous le signe de l’excellence, du leadership et de la célébration des parcours remarquables.
+            Les Mamadi DIANE Awards vous offrent l’opportunité de prendre part à un événement d’exception, réunissant des personnalités inspirantes et des acteurs engagés. Réservez votre badge dès maintenant afin de garantir votre accès à cette cérémonie prestigieuse.
+
           </p>
         </motion.div>
       </section>
@@ -59,12 +60,9 @@ export default function Badge() {
           <div className="w-12 h-12 rounded-full bg-yellow-500/20 flex items-center justify-center flex-shrink-0 text-yellow-500 mt-1">
             <Info size={24} />
           </div>
-          <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-2">
-            <p>
-              <strong className="text-white">Attention :</strong> Remplissez soigneusement ce formulaire pour générer votre accréditation.
-            </p>
+          <div className="text-gray-300 text-sm sm:text-base leading-relaxed space-y-2"> 
             <p className="text-gray-400">
-              Votre badge nominatif vous sera envoyé par email après validation de votre profil par notre comité d'organisation.
+              Merci de compléter le formulaire ci-dessous pour effectuer votre demande de badge. Notre équipe vous contactera pour confirmation. Chaque demande est étudiée avec attention afin de garantir une expérience à la hauteur de cet événement.
             </p>
           </div>
         </motion.div>
