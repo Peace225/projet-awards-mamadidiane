@@ -13,7 +13,7 @@ export default function Navbar() {
   const navigate = useNavigate();
 
   const aproposItems = [
-    { label: "Qui sommes nous", link: "#qui-sommes-nous" },
+    { label: "Qui sommes nous ?", link: "#qui-sommes-nous" },
     { label: "Nos valeurs", link: "#nos-valeurs" },
     { label: "Notre mission", link: "#nos-missions" },
     { label: "MAMADI DIANE – Parcours & engagement", link: "#parcours-engagement" },
@@ -25,8 +25,10 @@ export default function Navbar() {
   ];
 
   const mediasItems = [
-    { label: "Photos", link: "/photos" },
+    { label: "Galerie photos", link: "/photos" },
     { label: "Vidéos", link: "/videos" },
+    { label: "Presse", link: "/videos" },
+    { label: "Interviews", link: "/videos" },
   ];
 
   const navStructure = [

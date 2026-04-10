@@ -33,10 +33,10 @@ export default function Evenement() {
   })), []);
 
   const documents = [
-    { name: "Dossier de présentation", link: "/documents/presentation.pdf" },
-    { name: "Dossier de candidature", link: "/documents/candidature.pdf" },
-    { name: "Dossier de sponsoring", link: "/documents/sponsoring.pdf" },
-    { name: "Dossier de partenariat", link: "/documents/partenariat.pdf" },
+    { name: "Présentation Officielle", link: "/documents/presentation.pdf" },
+    { name: "Guide de Candidature", link: "/documents/candidature.pdf" },
+    { name: "Opportunités de Sponsoring", link: "/documents/sponsoring.pdf" },
+    { name: "Devenir Partenaire", link: "/documents/partenariat.pdf" },
   ];
 
   const infoCards = [
@@ -78,7 +78,7 @@ export default function Evenement() {
             className="bg-zinc-950 border border-yellow-500/30 rounded-[2rem] p-6 lg:p-8 shadow-2xl"
           >
             <h3 className="text-lg font-black text-yellow-500 mb-6 flex items-center gap-3 uppercase tracking-widest">
-              <FileText size={20} /> DOCUMENTS OFFICIELS
+              <FileText size={20} /> RESSOURCES OFFICIELLES
             </h3>
             <div className="space-y-3">
               {documents.map((doc, index) => (
@@ -100,7 +100,7 @@ export default function Evenement() {
             <div className="h-1 w-16 bg-yellow-500 mb-6 mx-auto lg:mx-0 rounded-full" />
             {/*  */}
             <p className="mt-6 text-gray-600 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 font-medium italic">
-              "Les AWARDS MAMADI DIANE célèbrent des parcours à fort impact et consacrent des contributions durables."
+              "Les Mamadi Diane Awards célèbrent les parcours d’exception et perpétuent les valeurs d’excellence, d’engagement et de transmission"
             </p>
           </motion.div>
 

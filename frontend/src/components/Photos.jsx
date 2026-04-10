@@ -50,13 +50,13 @@ export default function Photos() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
             Galerie <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300">Officielle</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
-            Revivez en images les moments forts, l'élégance et l'émotion de la précédente édition des Awards Mamadi Diané.
+          <p className="text-white max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
+            Vivez les Awards en images et en émotions
           </p>
         </motion.div>
 
         {/* --- GRILLE DE PHOTOS --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {photosData.map((photo, idx) => (
             <motion.div
               key={photo.id}
@@ -68,20 +68,20 @@ export default function Photos() {
               className="group relative aspect-[4/3] rounded-[2rem] overflow-hidden bg-zinc-900 border border-white/5 cursor-pointer shadow-xl hover:shadow-[0_20px_40px_rgba(234,179,8,0.15)] hover:border-yellow-500/50 transition-all duration-500"
             >
               {/* Image */}
-              <img
+              {/* <img
                 src={photo.src}
                 alt={photo.alt}
                 className="w-full h-full object-cover filter grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transform group-hover:scale-110 transition-all duration-700 ease-in-out"
               />
-              
+               */}
               {/* Overlay Sombre et Dégradé */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
+              {/* <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-90 transition-opacity duration-500" />
 
               {/* Lueur dorée au survol */}
-              <div className="absolute inset-0 bg-yellow-500/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* <div className="absolute inset-0 bg-yellow-500/20 mix-blend-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-500" /> */}
 
               {/* Contenu textuel sur l'image */}
-              <div className="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
+              {/* <div className="absolute inset-x-0 bottom-0 p-6 flex items-end justify-between transform translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500">
                 <div>
                   <p className="text-yellow-400 text-xs font-black uppercase tracking-widest mb-1 flex items-center gap-2">
                     <Camera size={14} /> {photo.category}
@@ -89,16 +89,16 @@ export default function Photos() {
                   <h3 className="text-white font-bold text-lg drop-shadow-md">
                     {photo.alt}
                   </h3>
-                </div>
+                </div> */} 
                 
                 {/* Icône Agrandir */}
-                <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-yellow-500 group-hover:text-black transition-colors">
+                {/* <div className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white group-hover:bg-yellow-500 group-hover:text-black transition-colors">
                   <Maximize2 size={18} />
                 </div>
               </div>
             </motion.div>
           ))}
-        </div>
+        </div> */} 
       </div>
 
       {/* --- LIGHTBOX (MODAL PLEIN ÉCRAN) --- */}

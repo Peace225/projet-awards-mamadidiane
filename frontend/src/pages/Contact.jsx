@@ -6,7 +6,7 @@ export default function ContactSection() {
   const labelStyle = "block text-sm font-semibold text-gray-300 mb-2 tracking-wide uppercase text-xs";
 
   const contactInfo = [
-    { icon: MapPin, title: "Siège Officiel", detail: "Abidjan, Côte d'Ivoire. (Adresse complète sur invitation)" },
+    { icon: MapPin, title: "Siège Officiel", detail: "Abidjan, Côte d'Ivoire. (Résidence Symphonia)" },
     { icon: Phone, title: "Ligne Directe", detail: "+225 00 00 00 00 00" },
     { icon: Mail, title: "Email Officiel", detail: "contact@awards-mamadidiane.com" },
   ];
@@ -53,8 +53,9 @@ export default function ContactSection() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black uppercase tracking-tighter mb-6 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
             Nous <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-yellow-300 uppercase">Contacter</span>
           </h1>
-          <p className="text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
-            Une question sur les candidatures, une proposition de partenariat ou une demande presse ? Notre comité d'organisation est à votre écoute.
+          <p className="text-gray-300 max-w-2xl mx-auto text-base md:text-lg leading-relaxed font-light">
+            Vous souhaitez en savoir plus sur les  Awards Mamadi DIANE, proposer une collaboration ou participer à cet événement d’exception ?
+            Notre équipe se tient à votre disposition pour répondre à toutes vos questions et vous accompagner.
           </p>
         </motion.div>
 
@@ -120,7 +121,12 @@ export default function ContactSection() {
               <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">
                Soumettre votre demande
               </h3>
-              <p className="text-gray-400 text-sm mb-10">Nous vous répondrons dans les plus brefs délais.</p>
+              <p className="text-gray-400 text-sm mb-10 leading-relaxed">
+              Nous vous invitons à soumettre votre demande via le formulaire ci-dessous.
+                  <br />
+                Chaque requête est traitée avec la plus grande attention par notre équipe.
+              </p>
+              
 
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
